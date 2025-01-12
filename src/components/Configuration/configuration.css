@@ -1,0 +1,37 @@
+
+
+.ec-configuration-tabs li {
+    display: flex ;
+    width: 100%;
+}
+
+.ec-configuration-tabs li button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #efeded;
+  border-right: 1px solid #efeded;
+  color: inherit;
+}
+
+.ec-configuration-tabs li button:hover,
+.back-button:hover {
+  background-color: #d4d8e3;
+}
+
+.back-button {
+    color: var(--textColor);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #efeded;
+    border-right: 1px solid #efeded;
+}

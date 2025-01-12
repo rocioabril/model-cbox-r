@@ -1,0 +1,12 @@
+
+
+.user-menu-container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+.user-menu-container p {
+    font-weight: 700;
+}

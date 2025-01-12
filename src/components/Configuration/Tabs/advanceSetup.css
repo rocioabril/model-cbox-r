@@ -1,0 +1,19 @@
+.ec-advance-setup-container {
+    color: var(--textColor);
+    width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #efeded;
+  border-bottom: 1px solid #efeded;
+  font-weight: 600;
+}
+
+.ec-advance-setup-container:hover {
+  background-color: #d4d8e3;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}

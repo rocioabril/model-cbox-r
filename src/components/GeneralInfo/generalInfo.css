@@ -1,0 +1,87 @@
+.table>:not(caption)>*>* {
+    color: var(--textColor);
+    font-size: .9rem;
+}
+table th {
+    white-space: nowrap;
+}
+
+table td, table th {
+    vertical-align: middle; 
+    /* text-align: center;     */
+}
+
+.main-general-info-container {
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.general-info-container {
+    align-self: flex-start;
+    width: 100%;
+}
+
+.tabs-container {
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    padding: 0 1rem;
+}
+
+.table-container {
+    /* align-self: flex-start; */
+    /* max-height: 400px; Define la altura máxima para el desplazamiento vertical: TODO: fijar en 100vh menos heigth de menu de cuenta */
+    overflow-y: auto;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.table-container >* {
+    border-radius: 5px;
+}
+
+.scrollable-table {
+    overflow-x: auto;
+}
+
+.devices-table {
+    width: 100%;
+}
+
+.tab-button {
+    padding-bottom: .5rem;
+    margin: 0 1rem;
+    position: relative;
+    bottom: -2px;
+    border-bottom: 3px solid transparent;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--textColor);
+}
+
+.active{
+    border-bottom: 3px solid #fd8045;
+}
+
+@media (min-width: 768px) { 
+    .table-container { 
+        width: calc(100vw - (var(--sidebarWidth) + 1rem));
+        padding: 2rem;
+    } 
+
+    .ec-sidebar__logo { 
+        width: 100%; 
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

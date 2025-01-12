@@ -1,0 +1,24 @@
+.password-warning-container {
+    background-color: #FFF3CD;
+    color: #664D03;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 1.5rem;
+    font-size: .9rem;
+
+}
+
+.password-fields-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    /* margin: 1.5rem; */
+    /* border: 1px solid #efeded; */
+}
+
+
+
+
+

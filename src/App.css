@@ -1,42 +1,223 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700;800&display=swap');
+
+:root {
+    --primaryButtonsColor: #ff711f;
+    --enerclicColor: #fe5e14;
+    --primaryFont: 'Raleway', sans-serif;
+    --textColor: #66686b;
+    --generalBackgroundColor: #efeded;
+    --errorColor: #e72727;
+    --sidebarWidth: 225px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+/* basics */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+html, body {
+  height: 100%;
+  font-family: Raleway, sans-serif;
+  color: var(--textColor);
+}
+
+
+h1 {
+    margin-bottom: 0rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img, button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* forms */
+
+.ec-form {
+    width: 100%;
+    /* margin: .5rem; */
+    background: white;
+    box-shadow: 10px 5px 5px #e0e0e030;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form__title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #efeded;
+    border-right: 1px solid #efeded;
+}
+
+
+.title__icon-bg {
+    background-color: var(--enerclicColor);
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 3px 3px 6px #bebebe,
+        -3px -3px 6px #ffffff;
+        color: white;
+        height: fit-content;
+        font-size: 1rem;
+}
+
+.title__icon-bg * {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.ec-error {
+    color: var(--errorColor);
+}
+
+.ec-invalid-feedback {
+    border: 2px solid var(--errorColor) !important;
+    background-color: #f7d0d05e !important;
+}
+
+.ec-input-container {
+    position: relative;
+    display: inline-block;
+    display: flex;
+}
+
+.ec-input-error-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.ec-invalid-feedback-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    transform: translateY(-50%);
+    color: var(--errorColor);
+}
+
+.ec-invalid-feedback-msg {
+    font-weight: 600;
+    padding: 0.2rem;
+    color: var(--errorColor);
+} 
+
+.ec-primary-btn { 
+  background: linear-gradient(184deg, #ff711f 0%, #fe5e14 100%); 
+  color: #ffffffd6; 
+  font-size: 0.9rem; font-weight: 600; 
+  padding: 1rem; cursor: pointer; 
+  border-radius: 3px; transition: 0.2s; 
+  text-align: center; 
+  width: fit-content;
+  min-width: 125px; 
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.ec-primary-btn:hover { 
+  background: linear-gradient(184deg, #fe5e14 0%, #ff4f00 100%); 
+  color: white; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.ec-secondary-btn {
+  background-color: transparent; 
+  color: #66758c; 
+  font-size: 0.9rem; 
+  font-weight: 600; 
+  padding: 1rem; 
+  cursor: pointer; 
+  border: 1px solid #7a7a7a; 
+  border-radius: 3px; 
+  transition: 0.2s; 
+  flex-grow: 1;
+  text-align: center; 
+  width: fit-content; 
+  min-width: 125px;
+}
+.ec-secondary-btn:hover { color: #fe5e14; border: 1px solid #fe5e14; }
+.ec-btn-container { padding: 1rem 2rem; 
+    display: flex;
+    justify-content: flex-end;
 }
 
-.card {
-  padding: 2em;
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.read-the-docs {
-  color: #888;
+.hideElement {
+    display: none;
 }
+
+@media (min-width: 768px) {
+    .app {
+        flex-direction: row;
+    }
+    .main-container {
+        padding: 2rem;
+    }
+    .ec-form {
+      width: fit-content;
+      min-width: 475px;
+      max-width: 1000px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
